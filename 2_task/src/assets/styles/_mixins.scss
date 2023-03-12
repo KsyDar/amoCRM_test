@@ -1,0 +1,95 @@
+@use "@/assets/styles/_breackpoints.scss" as *;
+
+@mixin inter-regular-font {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+
+  @include media("<=large", ">medium") {
+    font-size: 1.6rem;
+  }
+
+  @include media("<=medium") {
+    margin-right: 0;
+    font-size: 1.4rem;
+  }
+}
+
+@mixin inter-medium-font {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  @include media("<=large", ">medium") {
+    font-size: 1.4rem;
+  }
+
+  @include media("<=medium") {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin inter-bold-font {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+
+  @include media("<=large", ">medium") {
+    font-size: 1.6rem;
+  }
+
+  @include media("<=medium", ">small") {
+    font-size: 1.4rem;
+  }
+}
+
+@mixin inter-black-font {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4.8rem;
+
+  @include media("<=large", ">medium") {
+    font-size: 4.4rem;
+  }
+
+  @include media("<=medium", ">small") {
+    font-size: 4.2rem;
+  }
+
+  @include media("<=small") {
+    font-size: 3.6rem;
+  }
+}
+
+@mixin montserrat-light-font {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+
+  @include media("<=medium") {
+    font-size: 0.8rem;
+  }
+}
+
+@mixin montserrat-regular-font {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  @include media("<=large", ">medium") {
+    font-size: 1.6rem;
+  }
+
+  @include media("<=medium", ">small") {
+    font-size: 1.5rem;
+  }
+
+  @include media("<=small") {
+    font-size: 1.3rem;
+  }
+}

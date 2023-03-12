@@ -1,0 +1,62 @@
+@use "@/assets/styles/_variables.scss" as *;
+@use "@/assets/styles/_mixins.scss" as *;
+@use "@/assets/styles/_breackpoints.scss" as *;
+
+.ui-list-wrapper {
+  & + & {
+    margin-left: 4.6rem;
+
+    @include media("<=small") {
+      margin-left: 3.6rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &--end {
+    text-align: end;
+
+    @include media("<=medium") {
+      text-align: start;
+    }
+  }
+}
+
+.ui-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &--end {
+    align-items: flex-end;
+
+    @include media("<=medium") {
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    color: $secondary-font-color;
+    @include inter-bold-font;
+  }
+
+  &__item {
+    margin-right: 5.2rem;
+    margin-bottom: 1rem;
+    @include inter-regular-font;
+
+    @include media("<=small") {
+      overflow-wrap: break-word;
+    }
+
+    &--nomargin {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      text-align: end;
+
+      @include media("<=small") {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+}

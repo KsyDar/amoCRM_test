@@ -1,0 +1,104 @@
+@use "@/assets/styles/_mixins.scss" as *;
+@use "@/assets/styles/_breackpoints.scss" as *;
+@use "@/assets/styles/_variables.scss" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  @include inter-medium-font;
+
+  @include media("<=small") {
+    background: $mobile-layout-background;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    height: 2.4rem;
+    margin-right: 5.3rem;
+
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include media("<=large") {
+      margin-right: 0;
+    }
+
+    @include media("<=large", ">medium") {
+      width: 12rem;
+      height: 2rem;
+    }
+
+    @include media("<=medium", '>small') {
+      width: 10rem;
+      height: 2rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin-right: 13.7rem;
+
+    @include media("<=large") {
+      margin-right: 0;
+    }
+
+    @include media("<=small") {
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+
+      @include media("<=small") {
+        width: 100%;
+        justify-content: space-between;
+        text-transform: uppercase;
+      }
+
+      &-item {
+        & + & {
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-number {
+      margin-right: 4.9rem;
+
+      @include media("<=large", ">medium") {
+        margin-right: 3rem;
+      }
+
+      @include media("<=medium") {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__subtitle {
+    line-height: 1.2rem;
+    margin-top: 1rem;
+    max-width: 14rem;
+    @include montserrat-light-font;
+  }
+
+}

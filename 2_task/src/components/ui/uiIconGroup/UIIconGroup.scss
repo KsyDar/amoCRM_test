@@ -1,0 +1,11 @@
+@use "@/assets/styles/_breackpoints.scss" as *;
+
+.icon-group {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+
+  @include media("<=medium") {
+    width: 7rem;
+  }
+}
